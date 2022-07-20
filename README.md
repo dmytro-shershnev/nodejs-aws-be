@@ -9,7 +9,8 @@ Product Service Domain URL:
 | GET `/products`     | [/products](https://vibhfp3gqe.execute-api.eu-west-1.amazonaws.com/dev/products)                                      | Returns list of products (based on mock data). |
 | GET `/products/:id` | [/products/:id](https://vibhfp3gqe.execute-api.eu-west-1.amazonaws.com/dev/products/9) | Returns 1 searched product from collection.    |
 
-
+URL to Pull Request with updated SPA:
+- https://github.com/dmytro-shershnev/nodejs-aws-fe/pull/2
 
 Product Schema Example:
 ```json
