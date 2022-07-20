@@ -10,14 +10,12 @@ const getProductsById = async (event: APIGatewayProxyEvent): Promise<APIGatewayP
   const product = PRODUCTS.filter(item => item.id.toString() === id);
 
   if (!product || !product.length) {
-    return formatJSONResponse({
-      status: 404,
+    return formatJSONResponse(404,{
       message: 'Product not found.',
     });
   }
 
-  return formatJSONResponse({
-    status: 200,
+  return formatJSONResponse(200,{
     product,
   });
 };

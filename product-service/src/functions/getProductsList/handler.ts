@@ -5,7 +5,7 @@ import { middyfy } from '@libs/lambda';
 import PRODUCTS from '../../mock/products.json';
 
 const getProductsList = async (): Promise<APIGatewayProxyResult> => {
-  return formatJSONResponse({
+  return formatJSONResponse(200,{
     PRODUCTS,
   });
 };
