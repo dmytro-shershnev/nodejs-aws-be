@@ -7,7 +7,7 @@ import PRODUCTS from '../../mock/products.json';
 const getProductsById = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   const id = event.pathParameters.id;
 
-  const product = PRODUCTS.filter(item => item.id.toString() === id);
+  const product = PRODUCTS.filter(item => item.id === id);
 
   if (!product || !product.length) {
     return formatJSONResponse(404,{

@@ -14,7 +14,7 @@ Product Service Domain URL:
 Product Schema Example:
 ```json
 {
-  "id": 9,
+  "id": "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
   "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
   "price": 64,
   "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
