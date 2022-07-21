@@ -11,6 +11,7 @@ Product Service Domain URL:
 
 URL to Pull Request with updated SPA:
 - https://github.com/dmytro-shershnev/nodejs-aws-fe/pull/2
+- FE with integrated product service (https://d3rcziakc8rsyb.cloudfront.net/)
 
 Product Schema Example:
 ```json
