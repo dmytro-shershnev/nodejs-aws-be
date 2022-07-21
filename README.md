@@ -4,10 +4,10 @@ Product Service Domain URL:
 - https://vibhfp3gqe.execute-api.eu-west-1.amazonaws.com/
 
 
-| APIs                | Example URL                                                                                                           | Description                                    |
-|---------------------|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| GET `/products`     | [/products](https://vibhfp3gqe.execute-api.eu-west-1.amazonaws.com/dev/products)                                      | Returns list of products (based on mock data). |
-| GET `/products/:id` | [/products/:id](https://vibhfp3gqe.execute-api.eu-west-1.amazonaws.com/dev/products/9) | Returns 1 searched product from collection.    |
+| APIs                | Example URL                                                                                                          | Description                                    |
+|---------------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| GET `/products`     | [/products](https://vibhfp3gqe.execute-api.eu-west-1.amazonaws.com/dev/products)                                     | Returns list of products (based on mock data). |
+| GET `/products/:id` | [/products/:id](https://vibhfp3gqe.execute-api.eu-west-1.amazonaws.com/dev/products/7567ec4b-b10c-48c5-9345-fc73c48a80aa) | Returns 1 searched product from collection.    |
 
 URL to Pull Request with updated SPA:
 - https://github.com/dmytro-shershnev/nodejs-aws-fe/pull/2
