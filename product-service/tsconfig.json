@@ -18,7 +18,8 @@
     ".serverless/**/*",
     ".webpack/**/*",
     "_warmup/**/*",
-    ".vscode/**/*"
+    ".vscode/**/*",
+    ".idea/**/*"
   ],
   "ts-node": {
     "require": ["tsconfig-paths/register"]
