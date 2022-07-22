@@ -23,3 +23,6 @@ Product Schema Example:
   "count": 203
 }
 ```
+
+- SWAGGER documentation is created for Product Service (`openapi.yml`)
+- Lambda handlers are covered by basic UNIT tests (NO infrastructure logic is needed to be covered)
