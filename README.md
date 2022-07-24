@@ -25,4 +25,4 @@ Product Schema Example:
 ```
 
 - SWAGGER documentation is created for Product Service (`openapi.yml`)
-- Lambda handlers are covered by basic UNIT tests (NO infrastructure logic is needed to be covered)
+- Lambda handlers are covered by basic UNIT tests (NO infrastructure logic is needed to be covered) to run test execute `npm run test`
