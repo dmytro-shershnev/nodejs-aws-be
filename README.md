@@ -31,7 +31,10 @@ Product Schema Example:
 ## Task 4
 - [x] Task 4.1 is implemented
 - [x] Task 4.2 is implemented lambda links are provided and returns data
+- [ ] Task 4.3 is implemented lambda links are provided and products is stored in DB (call Task 4.2 to see the product) (works only from `sls invoke local function`)
+      Should be fixed.
 
 Additional (optional) tasks
 - [x] +1 (All languages) - All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
 - [x] +1 (All languages) - All lambdas do console.log for each incoming requests and their arguments
+- [x] +1 (All languages) - Transaction based creation of product (in case stock creation is failed then related to this stock product is not created and not ready to be used by the end user and vice versa) (https://devcenter.kinvey.com/nodejs/tutorials/bl-transactional-support)

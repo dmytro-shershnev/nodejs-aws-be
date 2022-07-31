@@ -8,7 +8,7 @@ CREATE TABLE products (
     title TEXT NOT NULL,
     description TEXT,
     image_url TEXT,
-    price INT
+    price INT NOT NULL
 );
 
 
@@ -32,9 +32,9 @@ VALUES
 INSERT INTO
     stock (product_id, count)
 VALUES
-    ('0c03fc18-7e05-4814-9115-41bba4714e7c', 203),
-    ('35d4b7a3-6cc6-496b-b7a1-5131a7f32acd', 470),
-    ('32e87272-707c-47df-8d5f-6d427fd6f981', 319),
-    ('f1929a1a-823d-4537-8515-d24f87e8ed98', 400),
-    ('7670b7c3-a06a-4d60-9eff-a1f74b6490b3', 250),
-    ('51cecb58-a0c6-482c-8372-0e1f18902cb1', 140);
+    ('f9306eb4-037b-4fba-920f-b111da2b3614', 203),
+    ('1a82e5fd-fa71-4180-b1b1-85bc650e35b8', 470),
+    ('156cb7e6-dd3d-4a1d-8e9e-9480cc12d884', 319),
+    ('ca1d6cfa-f7b2-463f-969c-bc45d1e8aec2', 400),
+    ('dfc18720-6d48-4a51-9a28-edd7da8826b6', 250),
+    ('51cb25b0-cde9-4900-ac35-bc2ecac93a7e', 140);

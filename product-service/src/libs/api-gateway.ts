@@ -10,6 +10,8 @@ export const formatJSONResponse = (httpStatusCode: number = HttpStatusCode.OK, r
     statusCode: httpStatusCode,
     headers: {
       "Access-Control-Allow-Origin": "*",
+      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Headers': '*',
       "content-type": "application/json"
     },
     body: JSON.stringify(response)

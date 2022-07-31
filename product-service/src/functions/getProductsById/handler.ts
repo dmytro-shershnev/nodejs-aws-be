@@ -8,7 +8,7 @@ const getProductsById: ValidatedEventAPIGatewayProxyEvent<unknown> = async (even
 
   try {
     if (!event.pathParameters || !event.pathParameters['id']) {
-      return formatJSONResponse(HttpStatusCode.MISSING_PARAMETER, 'Missing product Id');
+      return formatJSONResponse(HttpStatusCode.BAD_REQUEST, 'Missing product Id');
     }
 
     const { id } = event.pathParameters;
