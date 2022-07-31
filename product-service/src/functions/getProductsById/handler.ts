@@ -1,22 +1,29 @@
-import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
-import { formatJSONResponse } from '../../libs/api-gateway';
+import { formatJSONResponse, ValidatedEventAPIGatewayProxyEvent } from '../../libs/api-gateway';
 import { middyfy } from '../../libs/lambda';
-import { getMockData } from '../../libs/mock-request-data';
 import { HttpStatusCode } from '../../libs/constants';
+import { getProductById } from '../../libs/product-service';
 
-const getProductsById = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-  const id = event.pathParameters.id;
-  const products = await getMockData();
+const getProductsById: ValidatedEventAPIGatewayProxyEvent<unknown> = async (event) => {
+  console.log('Request pathParameters: ', event.pathParameters);
 
-  const searchResult = products.filter(item => item.id === id);
+  try {
+    if (!event.pathParameters || !event.pathParameters['id']) {
+      return formatJSONResponse(HttpStatusCode.BAD_REQUEST, 'Missing product Id');
+    }
 
-  if (!searchResult || !searchResult.length) {
-    return formatJSONResponse(HttpStatusCode.NOT_FOUND,'Product not found');
+    const { id } = event.pathParameters;
+    const product = await getProductById(id);
+
+    if (product) {
+      return formatJSONResponse(HttpStatusCode.OK, product);
+    }
+
+    return formatJSONResponse(HttpStatusCode.NOT_FOUND, 'Product not found');
+  } catch (error) {
+    console.log('Error: ', error);
+
+    return formatJSONResponse(HttpStatusCode.SERVER_ERROR, 'Internal server error');
   }
-
-  return formatJSONResponse(HttpStatusCode.OK,{
-    ...searchResult[0],
-  });
 };
 
 export const main = middyfy(getProductsById);
