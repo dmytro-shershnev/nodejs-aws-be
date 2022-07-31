@@ -30,3 +30,8 @@ Product Schema Example:
 
 ## Task 4
 - [x] Task 4.1 is implemented
+- [x] Task 4.2 is implemented lambda links are provided and returns data
+
+Additional (optional) tasks
+- [x] +1 (All languages) - All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
+- [x] +1 (All languages) - All lambdas do console.log for each incoming requests and their arguments

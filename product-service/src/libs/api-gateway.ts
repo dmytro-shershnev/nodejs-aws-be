@@ -1,11 +1,11 @@
-import type { APIGatewayProxyEvent, APIGatewayProxyResult, Handler } from "aws-lambda"
-import type { FromSchema } from "json-schema-to-ts";
+import type { APIGatewayProxyEvent, APIGatewayProxyResult, Handler } from 'aws-lambda';
+import type { FromSchema } from 'json-schema-to-ts';
 import { HttpStatusCode } from './constants';
 
 type ValidatedAPIGatewayProxyEvent<S> = Omit<APIGatewayProxyEvent, 'body'> & { body: FromSchema<S> }
 export type ValidatedEventAPIGatewayProxyEvent<S> = Handler<ValidatedAPIGatewayProxyEvent<S>, APIGatewayProxyResult>
 
-export const formatJSONResponse = <T>(httpStatusCode: number = HttpStatusCode.OK, response: T | Array<T> | string) => {
+export const formatJSONResponse = (httpStatusCode: number = HttpStatusCode.OK, response: any) => {
   return {
     statusCode: httpStatusCode,
     headers: {
